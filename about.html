@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>JiachengHe Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <header>
+      <div class="navigator">
+        <div class="logo"><a href="#">Jiacheng He</a></div>
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+        <a href="index.html" class="action">Get Started</a>
+        <div class="toggle" style="z-index: 100;">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="dropDown" style="z-index: 100;">
+        <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+          <li><a href="index.html" class="action">Get Started</a></li>
+      </div>
+
+      <script>
+        const toggleBtn = document.querySelector('.toggle');
+        const toggleBtnIcon = document.querySelector('.toggle i');
+        const dropDownMenu = document.querySelector('.dropDown');
+  
+        toggleBtn.onclick = function (){
+          dropDownMenu.classList.toggle('open');
+          const isOpen = dropDownMenu.classList.contains('open');
+        }
+      </script>
+    </header>
+
+    <div class="MyName">
+      <a class="MyName_intro">
+        <h2></br>INTRODUCTION</h2>
+          </br>My name is Jiacheng He, but you can call me Harry. 
+          I am currently a Computer Science major student enrolled at Temple University, where I am dedicated to pursuing excellence in my academic endeavors. 
+          As a highly motivated and detail-oriented individual, I consistently strive for perfection in my studies and personal growth. 
+          I am passionate about the field of computer science and eagerly embrace opportunities to expand my knowledge and skills.</br>
+      </br>
+        
+      </a>
+    </div>
+
+    <div class="MySkill">
+      <div class="words">
+        <h2>SKILLS</h2>
+        <ul class="Skills">
+          <li></br></li>
+          <li>C</li>
+          <li>Java</li>
+          <li>Linux</li>
+          <li>Python</li>
+          <li>Data Structure</li>
+          <li>Self Learning mysql</li>
+          <li>Self Learning html+css basic skill</li>
+          <li>Self Learning Static Website basic</li>
+        </ul>
+      </div>
+      <img></img>
+    </div>
+
+    <div class="MyProject">
+      <h2>MY PERSONAL PROJECTS</h2>
+      <a></br>Leveraging my self-learning and school experiences, I have undertaken various projects aligned with my interests and geared towards enhancing my future work experience.</br>
+        This is the link that leads to my GitHub account, where you can find my projects:   </br>
+      </a>
+      <div class="hyper"><a href="https://github.com/HarrryHe?tab=repositories"></br>https://github.com/HarrryHe?tab=repositories</a></div>
+    </div>
+
+
+</body>

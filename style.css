@@ -1,0 +1,404 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Helvetica',sans-serif;
+}
+
+
+
+body{
+    height: auto;
+    background-color:hwb(0 100% 0%);
+    background-image: url("wallhaven-zy5jzy.png");
+    background-size: 100%;
+    background-attachment: fixed;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    
+    
+}
+
+/* IDK linear-gradient(to right, #D16BA5,#86A8E7);*/
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 1rem;
+}
+
+a:hover{
+    color: #eac29c;
+}
+
+/* this is header */
+.navigator {
+    width:auto;
+    height: 80px;
+    max-width: auto;
+    margin: auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigator .logo a {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+
+.navigator .links{
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
+    gap: 3rem;
+}
+
+.navigator .toggle{
+    color:#fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+    transition: scale .2 ease;
+}
+
+.navigator .toggle:hover{
+    scale: 1.10;
+}
+
+.navigator .toggle:active{
+    scale: 0.9;
+}
+
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+
+.action{
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale .2 ease;
+}
+
+.action:hover{
+    color: #eac29c;
+    scale: 1.05;
+}
+
+.action:active {
+    scale: 0.9;
+}
+
+/* Dropdown */
+
+.dropDown{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropDown.open{
+    height: auto;
+
+}
+
+.dropDown li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropDown .action{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* intro */
+section#Intro {
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:#fff;
+}
+
+#Intro h1{
+    color: #eac29c;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+#Intro p{
+    font-weight:bold;
+    font-family: cursive;
+}  
+
+/* Responsive */
+@media(max-width: 992px){
+    .navigator .links,
+    .navigator .action{
+        display: none;
+    }
+
+    .navigator .toggle{
+        display: block;
+    }
+
+    .dropDown{
+        display: block;
+    } 
+}
+
+@media(max-width: 550px){
+    .dropDown{
+        left:2rem;
+        width: unset;
+    }
+}
+
+/*sqr*/
+.squares{
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.squares li{
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255,255,255,0.15);
+    position: absolute;
+    bottom: 0px;
+    animation: square 2s linear infinite;
+    border-radius: 5px;
+}
+
+/* different position */
+.squares li:nth-child(1){
+    left: 10%;
+    width: 120px;
+    height: 120px;
+    animation-duration: 10s;
+
+}
+
+.squares li:nth-child(2){
+    left: 20%;
+    width: 90px;
+    height: 90px;
+    animation-duration: 18s;
+    background-color: rgba(255,255,255,0.2);
+    
+}
+
+.squares li:nth-child(3){
+    left: 40%;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255,255,255,0.23);
+    animation-delay: 2s;
+    animation-duration: 10s;
+
+}
+
+.squares li:nth-child(4){
+    left: 25%;
+    animation-delay: 5s;
+    animation-duration: 15s;
+    
+}
+
+.squares li:nth-child(5){
+    left: 70%;
+    animation-duration: 5s;
+    
+}
+
+.squares li:nth-child(6){
+    left: 80%;
+    width: 110px;
+    height: 110px;
+    background-color: rgba(255,255,255,0.2);
+    animation-duration: 20s;
+    
+}
+
+.squares li:nth-child(7){
+    left: 35%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 2s;
+    animation-duration: 7s;
+    
+}
+
+.squares li:nth-child(8){
+    left: 55%;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255,255,255,0.2);
+    animation-delay: 2s;
+    animation-duration: 40s;
+    
+}
+
+.squares li:nth-child(9){
+    left: 25%;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255,255,255,0.25);
+    animation-delay: 5s;
+    animation-duration: 10s;
+    
+}
+
+.squares li:nth-child(10){
+    left: 95%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 3s;
+    animation-duration: 15s;
+}
+
+/* animation */
+@keyframes square {
+
+    0%{
+        transform: translateY(0);
+    }
+
+    100%{
+        transform: translateY(-160vh) rotate(600deg);
+    }
+}
+
+/* About Me */
+
+.MyName{
+    position:relative;
+    width: auto;
+    max-width: 1000px;
+    height: auto;
+    max-height: 350px;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 145px;
+    margin-left: 20px;
+    border-bottom: 2px solid #f4f4f4ce;
+    display: grid;
+}
+
+.MyName .MyName_intro h2{
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+    color:#eac29c;
+    
+}
+
+.MyName .MyName_intro{
+    color: #fff;
+    font-size: 1rem;
+    font-family: cursive;
+    font-weight:normal;
+    text-align:start;
+}
+
+.MySkill {
+    position:relative;
+    width: auto;
+    max-width: 1000px;
+    height: auto;
+    max-height: 350px;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 30px;
+    margin-left: 20px;
+    border-bottom: 2px solid #f4f4f4ce;
+}
+.MySkill .words{
+    display: grid;
+}
+
+.MySkill .words h2{
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+    color:#eac29c;
+}
+
+.MySkill .words .Skills{
+    font-family: cursive;
+    color: #fff;
+    font-size: 1rem;
+    font-weight:normal;
+    text-align:start;
+}
+
+.MyProject {
+    position:relative;
+    width: auto;
+    max-width: 1000px;
+    height: auto;
+    max-height: 350px;
+    padding: 10px;
+    padding-bottom: 90px;
+    margin: 10px;
+    margin-top: 30px;
+    margin-left: 20px;
+    border-bottom: 2px solid #f4f4f4ce;
+    display: grid;
+}
+
+.MyProject h2{
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+    color:#eac29c;
+}
+
+.MyProject a{
+    font-family: cursive;
+    color: #fff;
+    font-size: 1rem;
+    font-weight:normal;
+    text-align:start;
+}
+
+.hyper a:hover{
+    color:  #eac29c;
+
+}
+
+
+
+
+
+
+

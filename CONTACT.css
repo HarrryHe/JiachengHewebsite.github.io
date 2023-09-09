@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Helvetica',sans-serif;
+}
+
+
+
+body{
+    height: auto;
+    background-color:black;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    
+}
+
+/* IDK linear-gradient(to right, #D16BA5,#86A8E7);*/
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 1rem;
+}
+
+a:hover{
+    color: #eac29c;
+}
+
+/* this is header */
+.navigator {
+    width:auto;
+    height: 80px;
+    max-width: auto;
+    margin: auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigator .logo a {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+
+.navigator .links{
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
+    gap: 3rem;
+}
+
+.navigator .toggle{
+    color:#fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+    transition: scale .2 ease;
+}
+
+.navigator .toggle:hover{
+    scale: 1.10;
+}
+
+.navigator .toggle:active{
+    scale: 0.9;
+}
+
+footer{
+    border-bottom: 2px solid white;
+    position: relative;
+    padding: 0 2rem;
+    
+}
+
+.action{
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale .2 ease;
+}
+
+.action:hover{
+    color: #eac29c;
+    scale: 1.05;
+}
+
+.action:active {
+    scale: 0.9;
+}
+
+/* Dropdown */
+
+.dropDown{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropDown.open{
+    height: auto;
+
+}
+
+.dropDown li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropDown .action{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Responsive */
+@media(max-width: 992px){
+    .navigator .links,
+    .navigator .action{
+        display: none;
+    }
+
+    .navigator .toggle{
+        display: block;
+    }
+
+    .dropDown{
+        display: block;
+    } 
+}
+
+@media(max-width: 550px){
+    .dropDown{
+        left:2rem;
+        width: unset;
+    }
+}
+
+/* Contact */
+
+.parallax {
+    width: 100%;
+    height:80vh;
+    position:relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color:white;
+}
+
+.P1 {background-image: url(wallhaven-9dmmr1.jpg);}
+.P2 {background-image: url(wallhaven-kx772q.jpg);}
+.P3 {background-image: url(157974b91c128bb4b4ceeeab2f213957.jpg);}
+.P4 {background-image: url(wallhaven-jxy26w.png);}
+.P5 {background-image: url(wallhaven-rrq7zq.jpg);}
+
+.content {
+    width: auto;
+    height: 45vh;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color:white;
+}
+
+.content .icon a{
+    overflow: hidden;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.content .icon a:hover{
+    color: white;
+    scale: 1.05;
+}
+.content .icon a:active{
+    scale: 0.9;
+}
+
+.content .rsm{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+
