@@ -327,7 +327,6 @@ section#Intro {
 .MyName .MyName_intro{
     color: #fff;
     font-size: 1rem;
-    font-family: cursive;
     font-weight:normal;
     text-align:start;
 }
@@ -384,7 +383,6 @@ section#Intro {
 }
 
 .MyProject a{
-    font-family: cursive;
     color: #fff;
     font-size: 1rem;
     font-weight:normal;
